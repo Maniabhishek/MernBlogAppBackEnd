@@ -24,8 +24,6 @@ app.get('/',(req,res)=>{
 
 const PORT = process.env.PORT || 5000
 
-// const URL = "mongodb+srv://testdb:testdb@cluster0.x8dbn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
 mongoose.connect(process.env.CONNECTION_URL,{ useUnifiedTopology: true,useNewUrlParser: true})
 .then(()=>app.listen(PORT,()=>console.log(`server running on ${PORT}`)))
 .catch((error)=>console.log(error));
