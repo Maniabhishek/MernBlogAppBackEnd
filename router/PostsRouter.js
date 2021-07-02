@@ -8,7 +8,7 @@ const router = express.Router()
 router.get('/',getPost);
 
 //post request for saving post to db
-router.post("/",auth,savePost)
+router.post("/",auth,savePost);
 
 //update post
 router.patch("/:id",auth,updatePost);
